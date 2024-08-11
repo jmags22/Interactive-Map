@@ -1,0 +1,17 @@
+---
+title: "Interactive Map with Leaflet"
+author: "Jen M"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(leaflet)
+```
+
+```{r map, include+TRUE}
+leaflet() %>%
+  addTiles() %>%  # This adds the default OpenStreetMap tiles
+  addMarkers(lng = -20.1241, lat = 64.3272, popup = "Gullfoss Waterfall, Iceland")
+```
